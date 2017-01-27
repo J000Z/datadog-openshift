@@ -262,6 +262,7 @@ fi
 #######################################################################
 # INSTALL PYTHON 2.7
 #######################################################################
+working_dir=$(pwd)
 mkdir -p $OPENSHIFT_DATADOG_DIR/bin/.localpython
 mkdir -p $OPENSHIFT_DATADOG_DIR/bin/.tmp
 cd $OPENSHIFT_DATADOG_DIR/bin/.tmp
@@ -272,7 +273,7 @@ cd Python-2.7.1
 ./configure --prefix=$OPENSHIFT_DATADOG_DIR/bin/.localpython
 make
 make install
-cd -
+cd $working_dir
 rm -r $OPENSHIFT_DATADOG_DIR/bin/.tmp
 
 #######################################################################

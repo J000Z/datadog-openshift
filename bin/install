@@ -7,7 +7,7 @@ is_openshift=1 # Used to tell virtualenv to use the system variables
 if [ $apikey ]; then
 
 	# Install the DD agent from source
-	DD_API_KEY=$apikey DD_HOME=$dd_home DD_START_AGENT=0 sh setup_agent.sh
+	DD_API_KEY=$apikey DD_HOME=$dd_home DD_START_AGENT=0 sh $(dirname $0)/setup_agent.sh
 
 	# Set and uncomment bind_host parameter
 	sed -i "s/# bind_host:.*/bind_host: $OPENSHIFT_DATADOG_IP/" $dd_home/agent/datadog.conf

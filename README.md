@@ -12,15 +12,15 @@ The Datadog cartridge lets you install the Datadog Agent on your gears and colle
 ### How to install the Datadog cartridge
 
 1. Get your Datadog API key [here](https://app.datadoghq.com/account/settings#api) and define the `DATADOG_API_KEY` environment variable in your OpenShift app:
-  
+
   ```shell
   rhc set-env DATADOG_API_KEY=your_api_key -a myapp
-  ``` 
+  ```
 
 1. Add the cartridge to your gear:
 
   ```shell
-  rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift -a myapp
+  rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/cheng9393/datadog-openshift -a myapp
   ```
 1. Ssh to your gear to work with the agent:
   ```
@@ -54,7 +54,7 @@ If you have trouble connecting to your gear, read [this guide](https://www.opens
     ```
     cd $OPENSHIFT_DATADOG_DIR/dd-agent/agent/conf.d/
     ```
-    
+
 1. At this point, the Agent should be running on the gear and appear on the [Infrastructure Overview](https://app.datadoghq.com/infrastructure). You can configure integrations in Datadog to monitor databases, caches, etc. [Here](https://app.datadoghq.com/account/settings) the list of the available integrations, complete with configuration instructions.
 
 ### Scalable apps

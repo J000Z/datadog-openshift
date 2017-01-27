@@ -268,7 +268,7 @@ cd $OPENSHIFT_DATADOG_DIR/bin/.tmp
 wget http://www.python.org/ftp/python/2.7.1/Python-2.7.1.tgz
 tar -zxvf Python-2.7.1.tgz
 cd Python-2.7.1
-make clean
+#make clean
 ./configure --prefix=$OPENSHIFT_DATADOG_DIR/bin/.localpython
 make
 make install
@@ -280,7 +280,7 @@ rm -r $OPENSHIFT_DATADOG_DIR/bin/.tmp
 #######################################################################
 detect_python() {
     if [ -f $OPENSHIFT_DATADOG_DIR/bin/.localpython/bin/python2.7 ]; then
-        export PYTHON_CMD=="$OPENSHIFT_DATADOG_DIR/bin/.localpython/bin/python2.7"
+        export PYTHON_CMD="$OPENSHIFT_DATADOG_DIR/bin/.localpython/bin/python2.7"
     elif command -v python2.7; then
         export PYTHON_CMD="python2.7"
     elif command -v python2; then

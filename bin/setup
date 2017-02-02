@@ -21,5 +21,6 @@ function update-configuration {
     echo "$OPENSHIFT_ADVANCED_PYTHON_DIR/virtenv" > $OPENSHIFT_ADVANCED_PYTHON_DIR/env/VIRTUAL_ENV
 }
 
+mkdir $OPENSHIFT_ADVANCED_PYTHON_DIR/env
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 update-configuration

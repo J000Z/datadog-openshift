@@ -20,7 +20,7 @@ The Datadog cartridge lets you install the Datadog Agent on your gears and colle
 1. Add the cartridge to your gear:
 
   ```shell
-  rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/cheng9393/datadog-openshift -a myapp
+  rhc cartridge-add http://cartreflect-claytondev.rhcloud.com/github/datadog/datadog-openshift -a myapp
   ```
 1. Ssh to your gear to work with the agent:
   ```
